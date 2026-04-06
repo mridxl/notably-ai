@@ -5,11 +5,13 @@ import { DM_Sans } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/theme-provider";
 import Providers from "@/components/providers";
+import { env } from "@/env";
 
 export const metadata: Metadata = {
-  title: "1811 Notes",
+  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
+  title: "Notes",
   description:
-    "1811 Notes is a smart note-taking app that uses AI to summarize your notes.",
+    "Smart note-taking with AI-powered summaries. Create, edit, and organize your notes.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

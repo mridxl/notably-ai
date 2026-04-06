@@ -59,7 +59,7 @@ export default function AuthForm({ type }: { type: "login" | "register" }) {
       toast.success(
         type === "login"
           ? "Logged in successfully. Welcome back!"
-          : "Registered successfully. Welcome aboard to 1811 Notes!",
+          : "Registered successfully. Welcome aboard!",
       );
       router.push("/notes");
     });
@@ -78,13 +78,13 @@ export default function AuthForm({ type }: { type: "login" | "register" }) {
           <div className="flex flex-col items-center gap-2">
             <Image
               src="/logo.png"
-              alt="1811 labs logo"
+              alt="Notes"
               width="48"
               height="48"
               className="mb-1 rounded-md"
             />
-            <span className="sr-only">1811 labs</span>
-            <h1 className="text-xl font-bold">Welcome to 1811 Notes</h1>
+            <span className="sr-only">Notes</span>
+            <h1 className="text-xl font-bold">Welcome to Notes</h1>
             <div className="text-center text-sm">
               {type === "login" ? (
                 <span>

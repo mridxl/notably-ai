@@ -22,13 +22,13 @@ export default async function ProtectedLayout({
             <Link href="/notes" className="flex items-center gap-2">
               <Image
                 src="/logo.png"
-                alt="1811 labs logo"
+                alt="Notes"
                 width="32"
                 height="32"
                 className="rounded-md"
               />
               <span className="decoration-foreground after:bg-foreground relative text-xl font-bold after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">
-                1811 Notes
+                Notes
               </span>
             </Link>
           </div>
