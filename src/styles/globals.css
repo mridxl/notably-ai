@@ -17,6 +17,7 @@
   --shadow: 2px 2px 0px 0px var(--border);
   --sb-track-color: rgb(255, 247, 187);
   --sb-thumb-color: rgb(181, 125, 42);
+  --destructive: rgb(220, 38, 38);
 }
 
 .dark {
@@ -32,6 +33,7 @@
   --shadow: 2px 2px 0px 0px var(--border);
   --sb-track-color: rgb(39, 39, 42);
   --sb-thumb-color: rgb(250, 204, 21);
+  --destructive: rgb(248, 113, 113);
 }
 
 @theme inline {
@@ -45,6 +47,7 @@
   --color-border: var(--border);
   --color-overlay: var(--overlay);
   --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
 
   --spacing-boxShadowX: 2px;
   --spacing-boxShadowY: 2px;

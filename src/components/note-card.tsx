@@ -71,7 +71,7 @@ export function NoteCard({ note }: NoteCardProps) {
                 <Button
                   variant="noShadow"
                   size="sm"
-                  className="h-8 w-8 p-0 hover:bg-blue-50 hover:text-blue-600"
+                  className="h-8 w-8 p-0 hover:bg-main/15 hover:text-main"
                 >
                   <span className="sr-only">Edit</span>
                   <Edit className="h-4 w-4" />
@@ -80,7 +80,7 @@ export function NoteCard({ note }: NoteCardProps) {
               <Button
                 variant="noShadow"
                 size="sm"
-                className="h-8 w-8 p-0 text-red-500 hover:bg-red-50 hover:text-red-600"
+                className="text-destructive h-8 w-8 p-0 hover:bg-destructive/10 hover:text-destructive"
                 onClick={() => setIsDeleteDialogOpen(true)}
                 disabled={isDeleting}
               >

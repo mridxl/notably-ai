@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Plus, Search } from "lucide-react";
+import { FileText, Plus, Search } from "lucide-react";
 import { NoteCard } from "@/components/note-card";
 import { useQuery } from "@tanstack/react-query";
 import { fetchNotes } from "./actions";
@@ -36,22 +36,25 @@ export default function NotesClientComponent() {
 
   return (
     <>
-      <div className="mb-10 flex items-center justify-between">
+      <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <h1 className="text-3xl font-bold">Your Notes</h1>
-        <div className="flex items-end gap-4">
-          <div className="flex items-center">
-            <Search className="text-muted-foreground h-4 w-4 translate-x-6" />
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-end sm:gap-4">
+          <div className="relative w-full sm:max-w-xs md:max-w-md">
+            <Search className="text-muted-foreground pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
             <Input
               placeholder={isMobile ? "Search" : "Search notes..."}
-              className="pl-10"
+              className="min-h-11 pl-10"
               value={searchTerm}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
               }}
             />
           </div>
-          <Link href="/notes/create">
-            <Button className="flex items-center gap-2" variant="default">
+          <Link href="/notes/create" className="w-full shrink-0 sm:w-auto">
+            <Button
+              className="flex w-full items-center justify-center gap-2 sm:w-auto"
+              variant="default"
+            >
               <Plus size={18} />
               {!isMobile && <span>Create Note</span>}
             </Button>
@@ -100,6 +103,11 @@ export default function NotesClientComponent() {
             </>
           ) : (
             <>
+              <FileText
+                className="text-muted-foreground mb-4 h-12 w-12"
+                strokeWidth={1.25}
+                aria-hidden
+              />
               <h3 className="mb-2 text-xl font-medium">No notes yet</h3>
               <p className="text-muted-foreground mb-6">
                 Create your first note to get started

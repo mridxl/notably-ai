@@ -50,7 +50,7 @@ export default function NoteContent({ noteId }: NoteContentProps) {
         </p>
 
         {note.summary && (
-          <div className="dark:bg-secondary-background/70 mb-6 rounded-md border bg-[#fbe7a3] p-4">
+          <div className="bg-card-background mb-6 rounded-base border-2 border-border p-4 shadow-shadow">
             <h2 className="mb-2 text-lg font-semibold">Summary</h2>
             <p className="text-muted-foreground">{note.summary}</p>
           </div>
