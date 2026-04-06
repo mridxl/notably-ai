@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   const promptText = `Summarize the following note content in a concise paragraph:\n\n${prompt}`;
 
   const response = streamText({
-    model: googleAI("gemini-2.0-flash-001"),
+    model: googleAI("Gemini 3.1 Flash Lite"),
     prompt: promptText,
   });
 
